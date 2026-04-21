@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Padamshree Pigments & Solvents</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI', sans-serif;
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#f5f7fb;
+  color:#222;
+  padding-top:70px;
+}
+
+/* NAVBAR */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:white;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px 30px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.08);
+  z-index:1000;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:bold;
+  color:#0a3d62;
+  font-size:18px;
+}
+
+.logo img{
+  height:175px;
+}
+
+nav ul{
+  display:flex;
+  gap:20px;
+  list-style:none;
+}
+
+nav ul li a{
+  text-decoration:none;
+  color:#333;
+  font-weight:500;
+  transition:0.3s;
+}
+
+nav ul li a:hover{
+  color:#1e90ff;
+}
+
+.menu-btn{
+  display:none;
+  font-size:22px;
+  cursor:pointer;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:linear-gradient(135deg,#0a3d62,#1e90ff);
+  color:white;
+  padding:20px;
+}
+
+.hero h1{
+  font-size:42px;
+}
+
+.hero p{
+  margin-top:10px;
+  opacity:0.9;
+  font-size:18px;
+}
+
+.hero button{
+  margin-top:20px;
+  padding:12px 25px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:bold;
+  background:white;
+  color:#0a3d62;
+  transition:0.3s;
+}
+
+.hero button:hover{
+  transform:scale(1.05);
+}
+
+/* SECTIONS */
+section{
+  padding:80px 20px;
+  max-width:1100px;
+  margin:auto;
+}
+
+h2{
+  text-align:center;
+  margin-bottom:40px;
+  color:#0a3d62;
+}
+
+/* ABOUT */
+.about-box{
+  background:white;
+  padding:30px;
+  border-radius:12px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+  text-align:center;
+}
+
+/* STATS */
+.stats{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  margin-top:30px;
+}
+
+.stat{
+  background:white;
+  padding:20px;
+  border-radius:12px;
+  text-align:center;
+  box-shadow:0 8px 20px rgba(0,0,0,0.05);
+}
+
+.stat h3{
+  font-size:28px;
+  color:#1e90ff;
+}
+
+/* PRODUCTS */
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:white;
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.06);
+  transition:0.3s;
+  text-align:center;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 15px 30px rgba(0,0,0,0.12);
+}
+
+.card i{
+  font-size:28px;
+  color:#1e90ff;
+  margin-bottom:10px;
+}
+
+/* CONTACT */
+.contact{
+  text-align:center;
+  background:white;
+  padding:40px;
+  border-radius:12px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+/* BUTTON */
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 25px;
+  background:#0a3d62;
+  color:white;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:#1e90ff;
+}
+
+/* FOOTER */
+footer{
+  background:#0a3d62;
+  color:white;
+  text-align:center;
+  padding:20px;
+  margin-top:40px;
+}
+
+/* FLOAT BUTTONS */
+.float{
+  position:fixed;
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:white;
+  font-size:22px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.whatsapp{right:20px;bottom:20px;background:#25D366;}
+.phone{left:20px;bottom:20px;background:#0a3d62;}
+
+/* MOBILE */
+@media(max-width:768px){
+  nav ul{
+    display:none;
+    position:absolute;
+    top:60px;
+    right:0;
+    background:white;
+    flex-direction:column;
+    width:200px;
+    padding:10px;
+  }
+
+  nav ul.active{
+    display:flex;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">
+    <img src="logo.png" alt="Logo">
+    <span>Padamshree Pigments & Solvents</span>
+  </div>
+
+  <ul id="menu">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <div class="menu-btn" onclick="toggleMenu()">
+    <i class="fa fa-bars"></i>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero" id="home">
+  <div>
+    <h1>Industrial Chemicals You Can Trust</h1>
+    <p>Quality • Reliability • Long-term Partnership</p>
+    <a href="#products"><button>Explore Products</button></a>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Us</h2>
+  <div class="about-box">
+    We are a trusted supplier of industrial solvents and chemicals providing high-quality materials with consistent reliability and excellence since 1991.
+  </div>
+
+  <div class="stats">
+    <div class="stat"><h3>35+</h3><p>Years Experience</p></div>
+    <div class="stat"><h3>25+</h3><p>Products</p></div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <h2>Our Products</h2>
+
+  <div class="products">
+    <div class="card"><i class="fa fa-flask"></i> Hydroxy Ethyl Cellulose</div>
+    <div class="card"><i class="fa fa-flask"></i> Sodium Hypophosphite</div>
+    <div class="card"><i class="fa fa-flask"></i> Aluminium Stearate</div>
+    <div class="card"><i class="fa fa-flask"></i> Borax</div>
+    <div class="card"><i class="fa fa-flask"></i> Sodium Percarbonate</div>
+    <div class="card"><i class="fa fa-flask"></i> CMC Sodium</div>
+  </div>
+
+  <div style="text-align:center;">
+    <a class="btn" href="products.html" target="_blank">View Full List</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact Us</h2>
+
+  <div class="contact">
+    <p><i class="fa fa-envelope"></i> akashrajpurohit2008@gmail.com</p>
+    <p><i class="fa fa-phone"></i> +91 7709918081</p>
+
+    <a class="btn" href="mailto:akashrajpurohit2008@gmail.com">Send Email</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 Padamshree Solvents & Chemicals | All Rights Reserved
+</footer>
+
+<!-- FLOAT BUTTONS -->
+<a href="tel:+917709918081" class="float phone"><i class="fa fa-phone"></i></a>
+<a href="https://wa.me/917709918081" class="float whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+
+<script>
+function toggleMenu(){
+  document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>

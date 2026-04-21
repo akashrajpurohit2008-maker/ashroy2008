@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complete Product List - Padamshree Solvents & Chemicals</title>
+
+<style>
+body{
+  font-family: 'Segoe UI', sans-serif;
+  margin:0;
+  background:#f5f7fb;
+  color:#222;
+}
+
+/* HEADER */
+header{
+  background:linear-gradient(135deg,#0a3d62,#1e90ff);
+  color:white;
+  text-align:center;
+  padding:40px 15px;
+}
+
+header h1{
+  margin-bottom:5px;
+}
+
+/* CONTAINER */
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
+
+/* SEARCH */
+input{
+  width:100%;
+  padding:12px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  margin-bottom:20px;
+  font-size:15px;
+}
+
+/* PRODUCT GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:15px;
+}
+
+/* CARD */
+.card{
+  background:white;
+  padding:15px;
+  border-radius:10px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+}
+
+.card i{
+  color:#1e90ff;
+  margin-right:8px;
+}
+
+/* CATEGORY TAG */
+.tag{
+  display:inline-block;
+  margin-top:8px;
+  padding:3px 10px;
+  font-size:12px;
+  border-radius:20px;
+  background:#e6f2ff;
+  color:#0a3d62;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:15px;
+  background:#0a3d62;
+  color:white;
+  margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Complete Product List</h1>
+  <p>Padamshree Solvents & Chemicals</p>
+</header>
+
+<div class="container">
+
+<input type="text" id="search" placeholder="Search product..." onkeyup="filterProducts()">
+
+<div class="grid" id="productGrid">
+
+  <!-- Specialty -->
+  <div class="card">Acid Thickener <div class="tag">Specialty</div></div>
+  <div class="card">Pyridoxal-5-Phosphate <div class="tag">Specialty</div></div>
+  <div class="card">Sorbitol 70% <div class="tag">Specialty</div></div>
+  <div class="card">Tannic Acid <div class="tag">Specialty</div></div>
+  <div class="card">Gibberellic Acid <div class="tag">Specialty</div></div>
+
+  <!-- Cellulose -->
+  <div class="card">Carboxy Methyl Cellulose Sodium 5000 CPS <div class="tag">Polymers</div></div>
+  <div class="card">HEC (Hydroxy Ethyl Cellulose) <div class="tag">Polymers</div></div>
+  <div class="card">HPMC (Hydroxy Propyl Methyl Cellulose) <div class="tag">Polymers</div></div>
+  <div class="card">Poly Electrolyte <div class="tag">Polymers</div></div>
+
+  <!-- Surfactants -->
+  <div class="card">Cetodet 500 / CM1000 / CSA-20 <div class="tag">Surfactant</div></div>
+  <div class="card">Coco Amido Propyl Betaine <div class="tag">Surfactant</div></div>
+  <div class="card">Noigen X-100 / Triton X-100 <div class="tag">Surfactant</div></div>
+  <div class="card">Tween 20 <div class="tag">Surfactant</div></div>
+  <div class="card">Tween 80 <div class="tag">Surfactant</div></div>
+  <div class="card">SN Defoamer 1370 <div class="tag">Additive</div></div>
+
+  <!-- Solvents -->
+  <div class="card">Hydrocarbon Solvent (Dry Cleaning) <div class="tag">Solvent</div></div>
+  <div class="card">Petroleum Ether 40–60 <div class="tag">Solvent</div></div>
+
+  <!-- Inorganic -->
+  <div class="card">Borax <div class="tag">Salt</div></div>
+  <div class="card">Caustic Potash <div class="tag">Alkali</div></div>
+  <div class="card">Ferric Chloride <div class="tag">Industrial</div></div>
+  <div class="card">Lithium Carbonate <div class="tag">Industrial</div></div>
+  <div class="card">Mono Potassium Phosphate <div class="tag">Salt</div></div>
+  <div class="card">Sodium Chlorite 80% <div class="tag">Industrial</div></div>
+  <div class="card">Sodium Hypophosphite <div class="tag">Salt</div></div>
+  <div class="card">Sodium Percarbonate <div class="tag">Salt</div></div>
+  <div class="card">Sodium Sulfate <div class="tag">Salt</div></div>
+  <div class="card">Tetra Potassium Pyrophosphate <div class="tag">Salt</div></div>
+  <div class="card">Tri Sodium Phosphate <div class="tag">Salt</div></div>
+  <div class="card">Potassium Iodide <div class="tag">Salt</div></div>
+
+  <!-- Acids & Industrial -->
+  <div class="card">Phenyl Acetic Acid <div class="tag">Acid</div></div>
+  <div class="card">Morpholine <div class="tag">Industrial</div></div>
+  <div class="card">Hydrazine Hydrate <div class="tag">Industrial</div></div>
+
+  <!-- Oils -->
+  <div class="card">Citrodora Oil <div class="tag">Oil</div></div>
+  <div class="card">Lemon Grass Oil <div class="tag">Oil</div></div>
+
+  <!-- Materials -->
+  <div class="card">Aluminium Stearate <div class="tag">Material</div></div>
+  <div class="card">Precipitated Silica <div class="tag">Material</div></div>
+
+</div>
+
+</div>
+
+<footer>
+© 2026 Padamshree Solvents & Chemicals
+</footer>
+
+<script>
+function filterProducts(){
+  let input = document.getElementById("search").value.toLowerCase();
+  let cards = document.querySelectorAll(".card");
+
+  cards.forEach(card=>{
+    card.style.display = card.innerText.toLowerCase().includes(input)
+    ? "block" : "none";
+  });
+}
+</script>
+
+</body>
+</html>
